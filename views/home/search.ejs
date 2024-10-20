@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .search-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .search-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-container select,
+        .search-container button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .apply-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h1>Search Jobs</h1>
+
+        <form action="/apply" method="POST">
+            <label for="company">Select Company:</label>
+            <select name="company" id="company">
+                <option value="Google">Google</option>
+                <option value="Microsoft">Microsoft</option>
+                <option value="Amazon">Amazon</option>
+                <option value="Apple">Apple</option>
+                <option value="Netflix">Netflix</option>
+            </select>
+
+            <label for="job-title">Select Job Title:</label>
+            <select name="jobTitle" id="job-title">
+                <option value="Web Developer">Web Developer</option>
+                <option value="Software Developer">Software Developer</option>
+                <option value="Data Scientist">Data Scientist</option>
+                <option value="UI/UX Designer">UI/UX Designer</option>
+                <option value="DevOps Engineer">DevOps Engineer</option>
+            </select>
+
+            <button type="submit" class="apply-btn">Apply</button>
+        </form>
+    </div>
+</body>
+</html>
